@@ -4,9 +4,9 @@ type Props = {}
 
 const Header = ({}: Props) => {
     return (
-        <div>
+        <header>
             I am the header
-        </div>
+        </header>
     );
 };
 
