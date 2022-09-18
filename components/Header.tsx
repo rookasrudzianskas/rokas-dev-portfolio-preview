@@ -1,11 +1,14 @@
 import React from 'react';
 
-const Header = () => {
+type Props = {}
+
+const Header = ({}: Props) => {
     return (
         <div>
-            Rokas
+            I am the header
         </div>
     );
 };
 
 export default Header;
+// by Rokas with ❤️
