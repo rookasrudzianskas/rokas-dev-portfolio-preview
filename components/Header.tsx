@@ -6,11 +6,13 @@ type Props = {}
 const Header = ({}: Props) => {
     return (
         <header>
-           <div>
-               <SocialIcon url="https://twitter.com/jaketrent" />
+           <div className="flex flex-row itmes-center">
+               <SocialIcon url="https://twitter.com/byrookas" fgColor={"gray"} bgColor={"transparent"}  />
+               <SocialIcon url="https://youtube.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
+               <SocialIcon url="https://facebook.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
            </div>
             <div>
-
+                <SocialIcon className={"cursor-pointer"} network={"email"} fgColor={"gray"} bgColor={"transparent"} />
             </div>
         </header>
     );
