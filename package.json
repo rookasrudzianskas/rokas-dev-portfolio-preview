@@ -15,7 +15,8 @@
     "react-hook-form": "^7.35.0",
     "react-simple-typewriter": "^4.0.2",
     "react-social-icons": "^5.14.0",
-    "redux": "^4.2.0"
+    "redux": "^4.2.0",
+    "tailwind-scrollbar": "^2.0.1"
   },
   "devDependencies": {
     "@types/node": "17.0.35",
