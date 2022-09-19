@@ -26,10 +26,24 @@ const Header = ({}: Props) => {
                <SocialIcon url="https://facebook.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
                <SocialIcon url="https://instagram.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
            </motion.div>
-            <div className="flex items-center flex-row text-gray-300 cursor-pointer">
+            <motion.div
+                initial={{
+                    x: 500,
+                    opacity: 0,
+                    scale: 0.5,
+                }}
+                animate={{
+                    x: 0,
+                    opacity: 1,
+                    scale: 1,
+                }}
+                transition={{
+                    duration: 1.5,
+                }}
+                className="flex items-center flex-row text-gray-300 cursor-pointer">
                 <SocialIcon className={"cursor-pointer"} network={"email"} fgColor={"gray"} bgColor={"transparent"} />
                 <p className="uppercase hidden md:inline-flex text-sm text-gray-400">GET IN TOUCH</p>
-            </div>
+            </motion.div>
         </header>
     );
 };
