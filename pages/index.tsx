@@ -6,7 +6,7 @@ import Hero from "../components/Hero";
 
 const Home: NextPage = () => {
   return (
-    <div className="">
+    <div className="bg-[rgb(36,36,36)] text-white h-screen">
       <Head>
         <title>Rokas' Portfolio</title>
         <link rel="icon" href="/favicon.ico" />
@@ -14,7 +14,7 @@ const Home: NextPage = () => {
 
         <Header />
 
-        <section id="hero">
+        <section id="hero" className="">
             <Hero />
         </section>
 
