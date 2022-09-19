@@ -18,6 +18,11 @@ const ContactMe = ({}: Props) => {
     const onSubmit: SubmitHandler<Inputs> = formData => {
         // open mail client
         window.location.href = `mailto:byrookas@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`;
+        // clear form data
+        formData.name = '';
+        formData.email = '';
+        formData.subject = '';
+        formData.message = '';
     }
 
     return (
