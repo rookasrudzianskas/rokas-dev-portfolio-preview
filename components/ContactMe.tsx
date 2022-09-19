@@ -15,7 +15,10 @@ type Inputs = {
 
 const ContactMe = ({}: Props) => {
     const { register, handleSubmit, watch, formState: { errors } } = useForm();
-    const onSubmit: SubmitHandler<Inputs> = formData => console.log(formData);
+    const onSubmit: SubmitHandler<Inputs> = formData => {
+        // open mail client
+        window.location.href = `mailto:byrookas@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}`;
+    }
 
     return (
         <motion.div
