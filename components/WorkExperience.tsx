@@ -1,13 +1,18 @@
+import { motion } from 'framer-motion';
 import React from 'react';
 
 type Props = {}
 
 const WorkExperience = ({}: Props) => {
     return (
-        <div
-            className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
+        <motion.div
+            className="flex h-screen flex-col relative overflow-hidden text-left md:flex-row max-w-full px-10 justify-evenly mx-auto items-center">
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">Experience</h3>
-        </div>
+
+            <div>
+
+            </div>
+        </motion.div>
     );
 };
 
