@@ -5,16 +5,16 @@ type Props = {}
 
 const Header = ({}: Props) => {
     return (
-        <header>
+        <header className="flex flex-row items-start sticky top-0 justify-between max-w-7xl mx-auto">
            <div className="flex flex-row itmes-center">
                <SocialIcon url="https://twitter.com/byrookas" fgColor={"gray"} bgColor={"transparent"}  />
                <SocialIcon url="https://youtube.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
                <SocialIcon url="https://facebook.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
                <SocialIcon url="https://instagram.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
            </div>
-            <div>
+            <div className="flex items-center flex-row text-gray-300 cursor-pointer">
                 <SocialIcon className={"cursor-pointer"} network={"email"} fgColor={"gray"} bgColor={"transparent"} />
-                <p className="uppercase">GET IN TOUCH</p>
+                <p className="uppercase hidden md:inline-flex text-sm text-gray-400">GET IN TOUCH</p>
             </div>
         </header>
     );
