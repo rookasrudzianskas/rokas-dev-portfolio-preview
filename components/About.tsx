@@ -1,9 +1,13 @@
 import { motion } from 'framer-motion';
 import React from 'react';
+import {PageInfo} from "../typings";
+import {urlFor} from "../sanity";
 
-type Props = {}
+type Props = {
+    pageInfo: PageInfo;
+}
 
-const About = ({}: Props) => {
+const About = ({pageInfo}: Props) => {
     return (
         <motion.div
             initial={{opacity: 0 }}
@@ -12,7 +16,7 @@ const About = ({}: Props) => {
             className="flex flex-col relative h-screen text-center md:text-left md:flex-row max-w-7xl px-10 justify-evenly mx-auto items-center">
             <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">About</h3>
 
-            <motion.img src="https://avatars.githubusercontent.com/u/38469892?v=4"
+            <motion.img src={urlFor(pageInfo.profilePic).url()}
                         initial={{
                             x: -200,
                             opacity: 0,
@@ -34,13 +38,7 @@ const About = ({}: Props) => {
                     Here is a <span className="underline decoration-[#F7AB0A]/50">little</span> background
                 </h4>
                 <p className="text-sm">
-                    I'm Rokas. 💯You might also know me as byRookas! I'll be your coach & mentor inside the idiot-proof course, here is a little bit about me...
-                    I've been coding for over 5 years now. As a Full Stack Developer, I've worked both with startups and large corporations to help build & scale
-                    their companies. Along the journey I released my passion existed in helping others excel and pursue their dreams as upcoming developers.
-                    ⭐ With this passion, I have now trained thousand's of developers across the globe. Through live coaching sessions on Youtube, I have accumulated
-                    several MILLION views demonstrating how to apply developer skills in a range of cool builds and challenges. I deliver REAL VALUE by teaching
-                    REAL WORLD projects to help students enter the world of web and app development. You'll get hands-on experiance and learn the skills that are required
-                    to succeed in the real-world in this community. And if that's not enough I have coned most of the applications you have used in your life!
+                    {pageInfo?.backgroundInformation}
                 </p>
             </div>
         </motion.div>
