@@ -3,6 +3,7 @@ import {Cursor, Typewriter, useTypewriter } from 'react-simple-typewriter'
 import BackgroundCircles from "./BackgroundCircles";
 import Link from "next/link";
 import {PageInfo} from "../typings";
+import {urlFor} from "../sanity";
 
 type Props = {
     pageInfo: PageInfo;
@@ -27,7 +28,7 @@ const Hero = ({pageInfo}: Props) => {
     return (
         <div className="h-screen flex flex-col space-y-8 items-center justify-center text-center overflow-hidden">
             <BackgroundCircles />
-            <img src="https://avatars.githubusercontent.com/u/38469892?v=4" className="relative rounded-full w-32 h-32 mx-auto object-cover" alt=""/>
+            <img src={urlFor(pageInfo.heroImage).url()} className="relative rounded-full w-32 h-32 mx-auto object-cover" alt=""/>
             <div className="z-20">
                 <h2 className="text-sm uppercase text-gray-500 pb-2 tracking-[15px]">Software Engineer</h2>
             <h1 >
