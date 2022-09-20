@@ -33,7 +33,7 @@ const Home: NextPage = ({pageInfo, experiences, skills, projects, socials}: Prop
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
-        <Header />
+        <Header socials={socials} />
 
         <section id="hero" className="snap-center">
             <Hero />
@@ -89,6 +89,7 @@ export const getStaticProps: GetStaticProps<Props> = async () => {
             projects,
             socials
         },
+        // revalidate: 1
         revalidate: 10,
     }
 }

@@ -1,10 +1,13 @@
 import React from 'react';
 import { SocialIcon } from 'react-social-icons';
 import { motion } from "framer-motion"
+import {Social} from "../typings";
 
-type Props = {}
+type Props = {
+    socials: Social[];
+}
 
-const Header = ({}: Props) => {
+const Header = ({socials}: Props) => {
     return (
         <header className="flex flex-row items-start p-5 sticky top-0 justify-between max-w-7xl mx-auto z-20 xl:items-center">
            <motion.div initial={{
