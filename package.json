@@ -7,9 +7,12 @@
   },
   "dependencies": {
     "@heroicons/react": "^2.0.11",
+    "@portabletext/react": "^1.0.6",
     "@reduxjs/toolkit": "^1.8.5",
+    "@sanity/image-url": "^1.0.1",
     "framer-motion": "^7.3.5",
     "next": "latest",
+    "next-sanity": "^0.8.4",
     "react": "18.1.0",
     "react-dom": "18.1.0",
     "react-hook-form": "^7.35.0",
