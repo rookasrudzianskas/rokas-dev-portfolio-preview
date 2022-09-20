@@ -35,11 +35,9 @@ const ExperienceCard = ({experience}: Props) => {
                     {new Date(experience.dateStarted).toDateString()} - {experience.isCurrentlyWorkingHere ? 'Present' : new Date(experience.dateEnded).toDateString()}
                 </p>
                 <ul className="list-disc  space-y-4 ml-4 text-lg">
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
-                    <li>Summary points</li>
+                    {experience.points.map((point, index) => (
+                        <li key={index}>{point}</li>
+                    ))}
                 </ul>
             </div>
         </article>
