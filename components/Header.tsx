@@ -24,10 +24,10 @@ const Header = ({socials}: Props) => {
                duration: 1.5,
            }}
                        className="flex flex-row itmes-center">
-               <SocialIcon url="https://twitter.com/byrookas" fgColor={"gray"} bgColor={"transparent"}  />
-               <SocialIcon url="https://youtube.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
-               <SocialIcon url="https://facebook.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
-               <SocialIcon url="https://instagram.com/c/rokasrudzianskas" fgColor={"gray"} bgColor={"transparent"} />
+
+               {socials?.map((social, index) => (
+                   <SocialIcon key={social._id} url={social.url} fgColor={"gray"} bgColor={"transparent"} />
+                ))}
            </motion.div>
             <motion.div
                 initial={{

@@ -36,7 +36,7 @@ const Home: NextPage = ({pageInfo, experiences, skills, projects, socials}: Prop
         <Header socials={socials} />
 
         <section id="hero" className="snap-center">
-            <Hero />
+            <Hero pageInfo={pageInfo} />
         </section>
 
         <section id="about" className="snap-start">
