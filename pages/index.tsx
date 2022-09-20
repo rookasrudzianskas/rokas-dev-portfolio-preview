@@ -53,7 +53,7 @@ const Home: NextPage = ({pageInfo, experiences, skills, projects, socials}: Prop
         </section>
 
         <section id="projects" className="snap-start">
-            <Projects />
+            <Projects projects={projects} />
         </section>
 
         <section id="contactMe" className="snap-start">
