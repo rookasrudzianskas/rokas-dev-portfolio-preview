@@ -44,7 +44,7 @@ const Home: NextPage = ({pageInfo, experiences, skills, projects, socials}: Prop
         </section>
 
         <section id="experience" className="snap-start">
-            <WorkExperience />
+            <WorkExperience experience={experiences} />
         </section>
 
         <section id="skills" className="snap-start">
