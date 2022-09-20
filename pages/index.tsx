@@ -44,11 +44,12 @@ const Home: NextPage = ({pageInfo, experiences, skills, projects, socials}: Prop
         </section>
 
         <section id="experience" className="snap-start">
+            {/* @ts-ignore */}
             <WorkExperience experience={experiences} />
         </section>
 
         <section id="skills" className="snap-start">
-            <Skills />
+            <Skills skills={skills} />
         </section>
 
         <section id="projects" className="snap-start">
